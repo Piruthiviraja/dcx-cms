@@ -1,1 +1,62 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+$primary-bg: #3ca9e8;
+$primary-black: #000;
+$primary-head: #317eac;
+$table-primary: #f9f9f9;
+$table-text: #69b7ea;
+$text-grey: #9a9b9a;
+$border-primary: #dfdfdf;
+
+.bg-rblue {
+    background-color: $primary-bg;
+}
+
+.active {
+    background-color: $primary-bg !important;
+    border-color: $primary-bg !important;
+}
+
+h1, h2 {
+    color: $primary-head;
+}
+
+.primary-text {
+    color: $table-text !important;
+}
+
+.secondary-text {
+    color: $text-grey !important;
+}
+
+app-dashboard, app-pages, app-users, app-categories {
+    display: block;
+    height: 80vh;
+}
+
+.table-striped-even {
+    > tbody > tr:nth-of-type(even) > * {
+        --bs-table-color-type: $primary-black;
+        --bs-table-bg-type: #f9f9f9;
+    }
+
+    > thead > tr {
+        --bs-table-color-type: $primary-black;
+        --bs-table-bg-type: #f9f9f9;
+        border-top: 2px solid $border-primary;
+    }
+
+    > tbody > tr > th, td {
+        border-top: 2px solid $border-primary;
+        border-bottom: 0px !important;
+    }
+
+    > tbody > tr > td:nth-of-type(1) {
+        color: $table-text;
+    }
+}
+
+.btn-light {
+    --bs-btn-border-color: #e3e3eb;
+}

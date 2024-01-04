@@ -1,0 +1,12 @@
+.sub-menu-container {
+    margin: 30px 0px;
+    .sub-menu {
+        .container-fluid {
+            justify-content: flex-start;
+    
+            span {
+                padding: 0px 20px;
+            }
+        }
+    }
+}
