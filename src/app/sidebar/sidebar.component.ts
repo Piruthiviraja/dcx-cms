@@ -10,7 +10,7 @@ export class SidebarComponent {
 
   constructor(route: ActivatedRoute) {
     let currRoute = route.url;
-    console.log(currRoute);
+    // console.log(currRoute);
   }
 
 }

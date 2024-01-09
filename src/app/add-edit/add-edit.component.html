@@ -1,0 +1,44 @@
+<div class="createPage">
+<h2 *ngIf="!isEditMode">Add New Page Details</h2>
+<h2 *ngIf="isEditMode">Edit Page Details</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>{{id}} Page Title</label>
+            <input type="text" formControlName="pTitle" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['pTitle'].errors }" />
+            <div *ngIf="submitted && f['pTitle'].errors" class="invalid-feedback">
+                <div *ngIf="f['pTitle'].errors['required']">Page Title is required</div>
+            </div>
+        </div>
+        <div class="form-group col-5">
+            <label>Category</label>
+            <input type="text" formControlName="category" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['category'].errors }" />
+            <div *ngIf="submitted && f['category'].errors" class="invalid-feedback">
+                <div *ngIf="f['category'].errors['required']">Category is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-5">
+            <label>Author</label>
+            <input type="text" formControlName="author" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['author'].errors }" />
+            <div *ngIf="submitted && f['author'].errors" class="invalid-feedback">
+                <div *ngIf="f['author'].errors['required']">Author is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-light me-3">
+            <!-- <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> -->
+            Save
+        </button>
+        <button [routerLink]="['/pages']" class="btn btn-light">
+            Cancel
+        </button>
+
+        <!-- <button (click)="onReset()" class="btn btn-light">
+            Reset
+        </button> -->
+    </div>
+</form>
+</div>

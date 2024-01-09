@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddEditComponent } from './add-edit/add-edit.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages/pages.component';
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'categories', component: CategoriesComponent },
   { path: 'pages', component: PagesComponent },
   { path: 'users', component: UsersComponent },
-  { path: '**', component: DashboardComponent },  
+  { path: 'add', component: AddEditComponent },
+  { path: 'edit/:status', component: AddEditComponent },
+  { path: '**', component: DashboardComponent },
 ];
 
 @NgModule({

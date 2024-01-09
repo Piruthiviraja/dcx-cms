@@ -1,3 +1,14 @@
+
+<div class="editgroup">
+    <button (click)="addPageList()" class="btn btn-sm btn-light ebutton"><i class="bi bi-plus-lg"></i> New</button>
+    <button (click)="editPageList()" class="btn btn-sm btn-light ebutton"><i class="bi bi-pencil-fill"></i> Edit</button>
+    <button (click)="deletePageList()" class="btn btn-sm btn-light ebutton"><i class="bi bi-x-lg"></i> Delete</button>
+</div>
+
+<h1><i class="bi bi-file-earmark-fill"></i> Pages</h1>
+<hr>
+<app-submenu></app-submenu>
+
 <table class="table table-striped">
     <thead>
       <tr>
@@ -8,8 +19,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let data of pagesData">
-        <td scope="row"><input type="checkbox"></td>
+      <tr *ngFor="let data of dataList">
+        <td scope="row"><input type="checkbox" (change)="selectRow($event, data)"></td>
         <td class="primary-texts">{{data.pTitle}}</td>
         <td>{{data.category}}</td>
         <td>{{data.author}}</td>

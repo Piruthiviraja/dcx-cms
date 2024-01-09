@@ -32,7 +32,7 @@ h1, h2 {
 
 app-dashboard, app-pages, app-users, app-categories {
     display: block;
-    height: 80vh;
+    // height: 80vh;
 }
 
 .table-striped-even {
@@ -59,4 +59,15 @@ app-dashboard, app-pages, app-users, app-categories {
 
 .btn-light {
     --bs-btn-border-color: #e3e3eb;
+}
+
+.editgroup {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .ebutton {
+        width: 80px;
+        height: 40px;
+    }
 }
